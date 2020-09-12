@@ -1,0 +1,32 @@
+{
+  "id": "MoogFilt",
+  "isStereo": false,
+  "name": "MoogFilt",
+  "hint": "Moog Ladder Filter",
+  "params": [
+    {
+      "id": "cutoff",
+      "name": "Cutoff",
+      "hint": "Frequency Cutoff",
+      "type": "int",
+      "min": 0,
+      "max": 4095
+    },
+    {
+      "id": "resonance",
+      "name": "Resonance",
+      "hint": "Resonance",
+      "type": "int",
+      "min": 0,
+      "max": 4095
+    },
+    {
+      "id": "drive",
+      "name": "Drive",
+      "hint": "Drive",
+      "type": "int",
+      "min": 0,
+      "max": 4095
+    }
+  ]
+}
