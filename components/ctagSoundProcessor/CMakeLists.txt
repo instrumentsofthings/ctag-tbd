@@ -35,6 +35,8 @@ file(GLOB SRCS_FILES
     freeverb3/*.cpp
     freeverb3/*.h
     mifx/*.h
+    vcv/*.hpp
+    vcv/*.cpp
     ${CMAKE_BINARY_DIR}/gen_include/*.hpp
 )
 

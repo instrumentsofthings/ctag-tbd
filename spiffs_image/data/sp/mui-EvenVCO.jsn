@@ -1,0 +1,32 @@
+{
+  "id": "EvenVCO",
+  "isStereo": false,
+  "name": "EvenVCO",
+  "hint": "Port of EvenVCO by Befaco",
+  "params": [
+    {
+      "id": "octave",
+      "type": "int",
+      "name": "Octave",
+      "hint": "Octave",
+      "min": -5,
+      "max": 4
+    },
+    {
+      "id": "tune",
+      "type": "int",
+      "name": "Tune",
+      "hint": "Semitones",
+      "min": -7000,
+      "max": 7000
+    },
+    {
+      "id": "pwm",
+      "type": "int",
+      "name": "PWM",
+      "hint": "Pulse Width",
+      "min": -1000,
+      "max": 1000
+    }
+  ]
+}
