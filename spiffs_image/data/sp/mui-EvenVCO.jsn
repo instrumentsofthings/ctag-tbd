@@ -5,6 +5,14 @@
   "hint": "Port of EvenVCO by Befaco",
   "params": [
     {
+      "id": "waveform",
+      "type": "int",
+      "name": "Waveform Select",
+      "hint": "Waveform Select (triangle, sine, even, saw, square)",
+      "min": 0,
+      "max": 4
+    },
+    {
       "id": "octave",
       "type": "int",
       "name": "Octave",
@@ -27,6 +35,34 @@
       "hint": "Pulse Width",
       "min": -1000,
       "max": 1000
+    },
+    {
+      "id": "mod_pitch1",
+      "type": "int",
+      "name": "Mod Pitch1",
+      "min": -4095,
+      "max": 4095
+    },
+    {
+      "id": "mod_pitch2",
+      "type": "int",
+      "name": "Mod Pitch2",
+      "min": -4095,
+      "max": 4095
+    },
+    {
+      "id": "mod_fm",
+      "type": "int",
+      "name": "Mod FM",
+      "min": -4095,
+      "max": 4095
+    },
+    {
+      "id": "mod_pwm",
+      "type": "int",
+      "name": "Mod PWM",
+      "min": -4095,
+      "max": 4095
     }
   ]
 }
