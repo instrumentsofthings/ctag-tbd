@@ -2,6 +2,9 @@
 #include <iostream>
 #include "helpers/ctagFastMath.hpp"
 
+#define VT          0.312  // Thermal voltage (26 milliwats at room temperature)
+#define SAMPLE_RATE 44100.0
+
 using namespace CTAG::SP;
 
 ctagSoundProcessorMoogFilt::ctagSoundProcessorMoogFilt()
@@ -120,6 +123,7 @@ if(id.compare("drive") == 0){
 
 
 
+
 }
 
 void ctagSoundProcessorMoogFilt::loadPresetInternal()
@@ -133,7 +137,5 @@ cv_resonance = model->GetParamValue("resonance", "cv");
 drive = model->GetParamValue("drive", "current");
 cv_drive = model->GetParamValue("drive", "cv");
 // sectionCpp1
-
-
 
 }

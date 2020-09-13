@@ -2,7 +2,7 @@
   "id": "MoogFilt",
   "isStereo": false,
   "name": "MoogFilt",
-  "hint": "Moog Ladder Filter",
+  "hint": "Moog Ladder Filter based on design by D'Angelo, Valimaki",
   "params": [
     {
       "id": "cutoff",
