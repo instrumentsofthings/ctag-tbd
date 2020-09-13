@@ -21,7 +21,7 @@ void ctagSoundProcessorMoogFilt::Process(const ProcessData &data)
 
 	// cutoff frequency (Hz)
 	// TODO: currently max. frequency parameter seems to be around 4096 => internal scaling?
-	float fCutoff = static_cast<float>(cutoff); 
+	float fCutoff = static_cast<float>(cutoff) * 1.5f; 
 
 	// range between [0, 4]
 	float fResonance = static_cast<float>(resonance) / 4095.f * 4.f; 
@@ -29,11 +29,10 @@ void ctagSoundProcessorMoogFilt::Process(const ProcessData &data)
 	// currently allowing max. gain of factor 2
 	float fDrive = static_cast<float>(drive) / 4095.f * 2.f;
 
-/*
-	// TODO: simulator does not repeat input audio file if parameter is polled here. seg fault?
+	// process cv / pot data
 	if (cv_cutoff != -1)
 	{
-		fCutoff = data.cv[cv_cutoff] * 4095.f; // in Hz
+		fCutoff = data.cv[cv_cutoff] * 4095.f * 1.5f; 
 	}
 	if (cv_resonance != -1)
 	{
@@ -43,16 +42,13 @@ void ctagSoundProcessorMoogFilt::Process(const ProcessData &data)
 	{
 		fDrive = data.cv[cv_drive] * 2.f;
 	}
-*/
 
 	// process cutoff frequency
-	x = (MOOG_PI * fCutoff) / SAMPLE_RATE;
-	g = 4.0 * MOOG_PI * VT * fCutoff * (1.0 - x) / (1.0 + x);
+	x = (M_PI * fCutoff) / SAMPLE_RATE;
+	g = 4.0 * M_PI * VT * fCutoff * (1.0 - x) / (1.0 + x);
 
 	for (int i = 0; i < this->bufSz; i++)
 	{
-		data.buf[i * 2 + this->processCh] = data.buf[i * 2 + this->processCh];
-
 		dV0 = -g * (CTAG::SP::HELPERS::fasttanh((fDrive * data.buf[i * 2 + this->processCh] + fResonance * V[3]) / (2.0 * VT)) + tV[0]);
 		V[0] += (dV0 + dV[0]) / (2.0 * SAMPLE_RATE);
 		dV[0] = dV0;

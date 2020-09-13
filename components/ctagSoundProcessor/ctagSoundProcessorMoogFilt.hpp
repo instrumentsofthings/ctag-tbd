@@ -15,7 +15,6 @@
  * More information at https://github.com/ddiakopoulos/MoogLadders
  */
 
-#define MOOG_PI     3.14159265358979323846264338327950288
 #define VT          0.312  // Thermal voltage (26 milliwats at room temperature)
 #define SAMPLE_RATE 44100.0
 
