@@ -1,0 +1,24 @@
+{
+  "id": "MoogFilt1",
+  "isStereo": false,
+  "name": "MoogFilt1",
+  "hint": "Port of CSound Ladder Filter",
+  "params": [
+    {
+      "id": "cutoff",
+      "name": "Cutoff (Hz)",
+      "hint": "Cutoff Frequency (Hz)",
+      "type": "int",
+      "min": 0,
+      "max": 16000
+    },
+    {
+      "id": "resonance",
+      "name": "Resonance",
+      "hint": "Resonance",
+      "type": "int",
+      "min": 0,
+      "max": 4095
+    }
+  ]
+}
