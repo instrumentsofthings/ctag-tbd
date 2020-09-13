@@ -1,0 +1,24 @@
+{
+  "id": "PingPongPan",
+  "isStereo": true,
+  "name": "Ping Pong Pan",
+  "hint": "Ping Pong Pan based on DISTRHO Mini-Series",
+  "params": [
+    {
+      "id": "frequency",
+      "name": "Frequency (mHz)",
+      "hint": "Frequency in milli hertz",
+      "type": "int",
+      "min": 0,
+      "max": 100000
+    },
+    {
+      "id": "width",
+      "name": "Width (mils)",
+      "hint": "Width in mils",
+      "type": "int",
+      "min": 0,
+      "max": 1000
+    }
+  ]
+}
