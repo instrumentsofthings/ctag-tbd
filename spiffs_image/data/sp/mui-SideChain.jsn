@@ -1,0 +1,29 @@
+{
+  "id": "SideChain",
+  "isStereo": false,
+  "name": "SideChain",
+  "hint": "RJModules Sidechain Compressor Port",
+  "params": [
+    {
+      "id": "trigger",
+      "type": "bool",
+      "name": "External Trigger"
+    },
+    {
+      "id": "ratio",
+      "type": "int",
+      "name": "Ratio",
+      "hint": "Ratio",
+      "min": 0,
+      "max": 4095
+    },
+    {
+      "id": "release",
+      "type": "int",
+      "name": "Release",
+      "hint": "Release",
+      "min": 0,
+      "max": 4095
+    }
+  ]
+}
